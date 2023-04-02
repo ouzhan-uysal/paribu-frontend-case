@@ -19,11 +19,6 @@ const CustomTab: FC<ICustomTab> = ({ tabs }) => {
       <div className="tab-content">
         {tabs[activeTab].children}
       </div>
-      <div className="tab-footer">
-        <button type="submit" style={{
-          backgroundColor: tabs[activeTab].color
-        }} onClick={tabs[activeTab].buttonFunc}>{tabs[activeTab].label}</button>
-      </div>
     </div>
   )
 }

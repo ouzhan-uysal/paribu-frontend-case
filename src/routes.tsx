@@ -7,10 +7,10 @@ const SIGNIN = lazy(() => import('./views/welcome'));
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <HOME />
+    element: <SIGNIN />
   },
   {
-    path: '/signin',
-    element: <SIGNIN />
+    path: '/home',
+    element: <HOME />
   },
 ]);

@@ -1,8 +1,27 @@
-import React from 'react'
+import { ChangeEventHandler, FC, HTMLInputTypeAttribute } from "react";
 
-const CustomInput = () => {
+interface ICustomInput<T> {
+  type?: HTMLInputTypeAttribute | undefined;
+  value?: string | ReadonlyArray<string> | number | undefined;
+  onChange?: ChangeEventHandler<T> | undefined;
+  name?: string | undefined;
+  disabled?: boolean | undefined;
+  checked?: boolean | undefined;
+  placeholder?: string | undefined;
+  required?: boolean | undefined;
+  pattern?: string | undefined;
+}
+
+const CustomInput: FC<ICustomInput<any>> = ({ type, placeholder, value, onChange }) => {
   return (
-    <div>CustomInput</div>
+    <div className="input-container">
+      <input
+        type={type}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        className="input" />
+    </div>
   )
 }
 

@@ -1,8 +1,13 @@
-import React from 'react'
+import { FC } from 'react'
+import { ICustomButton } from '../../types/custom/button.interface';
 
-const CustomButton = () => {
+const CustomButton: FC<ICustomButton> = ({ name, onClick, bgColor }) => {
   return (
-    <div>CustomButton</div>
+    <div className="button-container">
+      <button type="button" name={name} onClick={onClick} style={{
+        backgroundColor: bgColor
+      }}>{name}</button>
+    </div>
   )
 }
 

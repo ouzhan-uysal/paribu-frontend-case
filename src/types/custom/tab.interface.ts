@@ -5,6 +5,5 @@ export interface ICustomTab {
     label: string;
     color: string;
     children: ReactNode;
-    buttonFunc: () => void;
   }>
 }
