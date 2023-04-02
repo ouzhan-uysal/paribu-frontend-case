@@ -17,6 +17,6 @@ const request = {
 };
 
 export const ApiRequest = {
-  signin: (payload: ISigninPayload): Promise<ISigninResponse> => request.post('/signin', payload),
-  signup: (payload: ISignupPayload): Promise<ISignupResponse> => request.post('/signup', payload),
+  signin: (payload: ISigninPayload): Promise<ISigninResponse> => request.post('/v1/user/login', payload),
+  signup: (payload: ISignupPayload): Promise<ISignupResponse> => request.post('/v1/user/register', payload),
 }

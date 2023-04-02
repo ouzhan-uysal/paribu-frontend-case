@@ -3,7 +3,11 @@ export interface ISigninPayload {
   password: string;
 }
 
-export interface ISigninResponse { }
+export interface ISigninResponse {
+  _id: string;
+  fullName: string;
+  email: string;
+}
 
 export interface ISignupPayload {
   fullName: string;
@@ -11,4 +15,8 @@ export interface ISignupPayload {
   password: string;
 }
 
-export interface ISignupResponse { }
+export interface ISignupResponse {
+  _id: string;
+  fullName: string;
+  email: string;
+}

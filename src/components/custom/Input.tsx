@@ -12,11 +12,12 @@ interface ICustomInput<T> {
   pattern?: string | undefined;
 }
 
-const CustomInput: FC<ICustomInput<any>> = ({ type, placeholder, value, onChange }) => {
+const CustomInput: FC<ICustomInput<any>> = ({ type, placeholder, value, onChange, name }) => {
   return (
     <div className="input-container">
       <input
         type={type}
+        name={name}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
