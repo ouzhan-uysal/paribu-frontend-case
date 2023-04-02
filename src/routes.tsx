@@ -1,13 +1,13 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-const HOME = lazy(() => import('./views/index'));
-const SIGNIN = lazy(() => import('./views/welcome'));
+const WELCOME = lazy(() => import('./pages/welcome'));
+const HOME = lazy(() => import('./pages'));
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <SIGNIN />
+    element: <WELCOME />
   },
   {
     path: '/home',

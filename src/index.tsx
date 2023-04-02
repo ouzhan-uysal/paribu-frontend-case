@@ -4,6 +4,7 @@ import './styles/styles.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AuthContextProvider } from './contexts/AuthContext';
+import './i18n';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <AuthContextProvider>
-      <App />
+      <React.Suspense fallback="loading...">
+        <App />
+      </React.Suspense>
     </AuthContextProvider>
   </React.StrictMode>
 );
